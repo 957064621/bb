@@ -282,7 +282,8 @@ yesButton.addEventListener("click", function() {
     document.body.innerHTML = `
         <div class="yes-screen">
             <h1 class="yes-text">
-                !!!陆宇会一直一直喜欢谷婕宝宝!! ( >᎑<)♡︎ᐝ <br>
+                !!!陆宇会一直一直喜欢谷婕宝宝!!<br>
+                ( >᎑<)♡︎ᐝ <br>
                 ❤斯人若彩虹，遇上方知有❤
             </h1>
             <img src="images/hug.png" alt="拥抱" class="yes-image">
