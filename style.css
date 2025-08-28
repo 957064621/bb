@@ -73,20 +73,39 @@ button {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    z-index: 2; /* 确保文字和图片在爱心动画之上 */
 }
 
 .yes-text {
     font-size: 7vw; /* 字体大小根据视口宽度变化 */
+    z-index: 3; /* 确保文字在最上层 */
+    position: relative;
 }
 
 .yes-image {
     width: 50%; /* 图片宽度自适应容器 */
     max-width: 300px; /* 最大宽度限制 */
+    z-index: 3; /* 确保图片在爱心动画之上 */
+    position: relative;
+}
+
+/* 爱心动画画布样式 */
+.heart-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none; /* 让画布不阻挡其他元素的点击 */
+    z-index: 1; /* 确保在背景之上，但在其他元素之下 */
+    opacity: 0.8; /* 稍微透明，不要太强烈 */
 }
 
 /* 音乐控制按钮样式 */
 .music-controls {
     margin-top: 20px;
+    z-index: 3; /* 确保按钮在爱心动画之上 */
+    position: relative;
 }
 
 .music-btn {
@@ -146,6 +165,12 @@ button {
 
     .yes-image {
         width: 300px; /* 固定图片宽度 */
+    }
+    
+    /* 电脑端爱心画布样式 */
+    .heart-canvas {
+        width: 100vw;
+        height: 100vh;
     }
     
     /* 电脑端音乐按钮样式 */
